@@ -87,7 +87,7 @@ const syncSubscription = (sub) => {
                     .setTitle(item.title)
                     .setURL(`https://www.vinted.fr${item.path}`)
                     .setImage(item.photos[0]?.url)
-                    .setColor('#008000')
+                    .setColor('#2f3136')
                     .setTimestamp(item.createdTimestamp)
                     .setFooter(`Article lié à la recherche : ${sub.id}`)
                     .addField('Taille', item.size || 'vide', true)
@@ -165,7 +165,7 @@ client.on('ready', () => {
     setInterval(sync, 15000);
 
     const { version } = require('./package.json');
-    client.user.setActivity(`Vinted BOT | v${version}`);
+    client.user.setActivity(`LP Vinted BOT`);
 });
 
 client.on('interactionCreate', (interaction) => {
